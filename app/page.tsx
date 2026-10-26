@@ -10,7 +10,7 @@ export default function Page() {
         alert("Memento mori.");
         window.close();
       },
-      10 * 60 * 60 * 1000,
+      10 * 60 * 1000,
     );
 
     return () => clearTimeout(timeout);
