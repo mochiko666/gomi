@@ -7,8 +7,8 @@ export default function Page() {
   useEffect(() => {
     const timeout = setTimeout(
       () => {
-        alert("Memento mori.");
         setCount(-666666666);
+        alert("Memento mori.");
         window.close();
       },
       1 * 60 * 1000,
