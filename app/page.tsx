@@ -10,7 +10,7 @@ export default function Page() {
         alert("Memento mori.");
         window.close();
       },
-      10 * 60 * 60,
+      10 * 60 * 60 * 1000,
     );
 
     return () => clearTimeout(timeout);
@@ -36,9 +36,16 @@ export default function Page() {
   }, [count]);
 
   return (
-    <main className="px-16 py-10 bg-blue-600 border-2 border-pink-300 text-center">
-      <h1 className="Are you sure you're playing this f**kin' sh*t?"></h1>
-      <span onClick={() => setCount((prev) => prev + 1)} className="text-2xl text-green-400">{count}</span>
+    <main className="flex flex-col items-center gap-4">
+      <h1 className="text-4xl text-pink-300 text-shadow-blue-400">
+        Are you sure you're playing this f**kin' sh*t?
+      </h1>
+      <span
+        onClick={() => setCount((prev) => prev + 1)}
+        className="px-16 py-10 text-2xl text-green-400 bg-blue-700 border-2 border-pink-300 text-center"
+      >
+        {count}
+      </span>
     </main>
   );
 }
