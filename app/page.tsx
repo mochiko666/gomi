@@ -8,9 +8,10 @@ export default function Page() {
     const timeout = setTimeout(
       () => {
         alert("Memento mori.");
+        setCount(-666666666);
         window.close();
       },
-      10 * 60 * 1000,
+      1 * 60 * 1000,
     );
 
     return () => clearTimeout(timeout);
@@ -33,8 +34,6 @@ export default function Page() {
       case 10000:
         alert("nice auto clicker w");
         break;
-      default:
-        break;
     }
   }, [count]);
 
@@ -43,12 +42,12 @@ export default function Page() {
       <h1 className="text-4xl text-pink-300 text-shadow-blue-400">
         Are you sure you're playing this f**kin' sh*t?
       </h1>
-      <span
+      <button
         onClick={() => setCount((prev) => prev + 1)}
         className="px-16 py-10 text-2xl text-green-400 bg-blue-700 border-2 border-pink-300 text-center"
       >
         {count}
-      </span>
+      </button>
     </main>
   );
 }
