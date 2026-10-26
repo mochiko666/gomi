@@ -30,6 +30,9 @@ export default function Page() {
       case 1000:
         alert("This is incredible!! you finally reached 1000!!!");
         break;
+      case 10000:
+        alert("nice auto clicker w");
+        break;
       default:
         break;
     }
